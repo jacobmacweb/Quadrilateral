@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quadrilateral</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="js/qd.js"></script>
+</head>
+<body>
+    <textarea placeholder="Code" id="c"></textarea>
+    <br/>
+    <button onclick="javascript:run()">Run</button>
+    <button onclick="javascript:stop()">Stop</button>
+    <p>On: <code id="char"></code></p>
+    <input id="interval" placeholder="Interval" value="10">
+    <br/>
+    <textarea placeholder="Output" id="out"></textarea>
+    <script>
+    function run() {
+        i = new Interpreter(document.getElementById('c').value)
+        i.execute();
+    }
+    function stop() {
+        i.running = false;
+    }
+    </script>
+</body>
+</html>
