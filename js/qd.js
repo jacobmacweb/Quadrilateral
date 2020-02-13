@@ -190,11 +190,11 @@ Interpreter.prototype.run = function () {
     case '\\':
       switch (this.direction) {
         case 'N':
-        case 'W':
+        case 'E':
           this.direction = 'SE'
           break
         case 'S':
-        case 'E':
+        case 'W':
           this.direction = 'NW'
           break
         default:
